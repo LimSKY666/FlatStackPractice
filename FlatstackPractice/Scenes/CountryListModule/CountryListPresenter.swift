@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CountryListPresenterProtocol {
+protocol CountryListPresentationLogic {
     
 }
 

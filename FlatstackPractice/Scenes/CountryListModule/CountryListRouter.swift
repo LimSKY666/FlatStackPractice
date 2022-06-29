@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol CountryListRouterProtocol {
+protocol CountryListRoutingLogic {
     
 }
 

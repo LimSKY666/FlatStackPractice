@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CountryListDisplayLogic: AnyObject {
+    
+}
+
 class CountryListViewController: UIViewController {
 
     override func viewDidLoad() {
