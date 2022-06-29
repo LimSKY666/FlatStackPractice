@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A30A529F286C630600781055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A529E286C630600781055 /* AppDelegate.swift */; };
 		A30A52A1286C630600781055 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52A0286C630600781055 /* SceneDelegate.swift */; };
-		A30A52A3286C630600781055 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52A2286C630600781055 /* ViewController.swift */; };
+		A30A52A3286C630600781055 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52A2286C630600781055 /* CountryListViewController.swift */; };
 		A30A52A6286C630600781055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30A52A4286C630600781055 /* Main.storyboard */; };
 		A30A52A9286C630600781055 /* FlatstackPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A30A52A7286C630600781055 /* FlatstackPractice.xcdatamodeld */; };
 		A30A52AB286C630800781055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30A52AA286C630800781055 /* Assets.xcassets */; };
@@ -17,6 +17,15 @@
 		A30A52B9286C630900781055 /* FlatstackPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52B8286C630900781055 /* FlatstackPracticeTests.swift */; };
 		A30A52C3286C630900781055 /* FlatstackPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52C2286C630900781055 /* FlatstackPracticeUITests.swift */; };
 		A30A52C5286C630900781055 /* FlatstackPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52C4286C630900781055 /* FlatstackPracticeUITestsLaunchTests.swift */; };
+		A30A52D3286C687800781055 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A30A52D2286C687800781055 /* Kingfisher */; };
+		A30A52D6286C697700781055 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52D5286C697700781055 /* Country.swift */; };
+		A30A52D9286C6AED00781055 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = A30A52D8286C6AED00781055 /* SwiftyJSON */; };
+		A30A52DC286C6B6400781055 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A30A52DB286C6B6400781055 /* SnapKit */; };
+		A30A52DE286C6B9200781055 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52DD286C6B9200781055 /* Page.swift */; };
+		A30A52E1286C6CFB00781055 /* JsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E0286C6CFB00781055 /* JsonService.swift */; };
+		A30A52E6286C6FE400781055 /* CountryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E5286C6FE400781055 /* CountryListInteractor.swift */; };
+		A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */; };
+		A30A52EA286C702400781055 /* CountryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E9286C702400781055 /* CountryListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +49,7 @@
 		A30A529B286C630600781055 /* FlatstackPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlatstackPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30A529E286C630600781055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A30A52A0286C630600781055 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A30A52A2286C630600781055 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A30A52A2286C630600781055 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
 		A30A52A5286C630600781055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A30A52A8286C630600781055 /* FlatstackPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlatstackPractice.xcdatamodel; sourceTree = "<group>"; };
 		A30A52AA286C630800781055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +60,12 @@
 		A30A52BE286C630900781055 /* FlatstackPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatstackPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30A52C2286C630900781055 /* FlatstackPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatstackPracticeUITests.swift; sourceTree = "<group>"; };
 		A30A52C4286C630900781055 /* FlatstackPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatstackPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A30A52D5286C697700781055 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		A30A52DD286C6B9200781055 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		A30A52E0286C6CFB00781055 /* JsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
+		A30A52E5286C6FE400781055 /* CountryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractor.swift; sourceTree = "<group>"; };
+		A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListPresenter.swift; sourceTree = "<group>"; };
+		A30A52E9286C702400781055 /* CountryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30A52DC286C6B6400781055 /* SnapKit in Frameworks */,
+				A30A52D9286C6AED00781055 /* SwiftyJSON in Frameworks */,
+				A30A52D3286C687800781055 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,14 +119,12 @@
 		A30A529D286C630600781055 /* FlatstackPractice */ = {
 			isa = PBXGroup;
 			children = (
+				A30A52E3286C6F6E00781055 /* Scenes */,
+				A30A52E2286C6D3F00781055 /* Resources */,
+				A30A52DF286C6CE400781055 /* Services */,
+				A30A52D4286C68C100781055 /* Models */,
 				A30A529E286C630600781055 /* AppDelegate.swift */,
 				A30A52A0286C630600781055 /* SceneDelegate.swift */,
-				A30A52A2286C630600781055 /* ViewController.swift */,
-				A30A52A4286C630600781055 /* Main.storyboard */,
-				A30A52AA286C630800781055 /* Assets.xcassets */,
-				A30A52AC286C630800781055 /* LaunchScreen.storyboard */,
-				A30A52AF286C630800781055 /* Info.plist */,
-				A30A52A7286C630600781055 /* FlatstackPractice.xcdatamodeld */,
 			);
 			path = FlatstackPractice;
 			sourceTree = "<group>";
@@ -130,6 +146,54 @@
 			path = FlatstackPracticeUITests;
 			sourceTree = "<group>";
 		};
+		A30A52D4286C68C100781055 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A30A52D5286C697700781055 /* Country.swift */,
+				A30A52DD286C6B9200781055 /* Page.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A30A52DF286C6CE400781055 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A30A52E0286C6CFB00781055 /* JsonService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A30A52E2286C6D3F00781055 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A30A52AF286C630800781055 /* Info.plist */,
+				A30A52AA286C630800781055 /* Assets.xcassets */,
+				A30A52AC286C630800781055 /* LaunchScreen.storyboard */,
+				A30A52A7286C630600781055 /* FlatstackPractice.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A30A52E3286C6F6E00781055 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A30A52A4286C630600781055 /* Main.storyboard */,
+				A30A52E4286C6FAF00781055 /* CountryListModule */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A30A52E4286C6FAF00781055 /* CountryListModule */ = {
+			isa = PBXGroup;
+			children = (
+				A30A52E5286C6FE400781055 /* CountryListInteractor.swift */,
+				A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */,
+				A30A52E9286C702400781055 /* CountryListRouter.swift */,
+				A30A52A2286C630600781055 /* CountryListViewController.swift */,
+			);
+			path = CountryListModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +210,11 @@
 			dependencies = (
 			);
 			name = FlatstackPractice;
+			packageProductDependencies = (
+				A30A52D2286C687800781055 /* Kingfisher */,
+				A30A52D8286C6AED00781055 /* SwiftyJSON */,
+				A30A52DB286C6B6400781055 /* SnapKit */,
+			);
 			productName = FlatstackPractice;
 			productReference = A30A529B286C630600781055 /* FlatstackPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +287,11 @@
 				Base,
 			);
 			mainGroup = A30A5292286C630600781055;
+			packageReferences = (
+				A30A52D1286C687800781055 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				A30A52D7286C6AED00781055 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				A30A52DA286C6B6400781055 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A30A529C286C630600781055 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,10 +335,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A30A52A3286C630600781055 /* ViewController.swift in Sources */,
+				A30A52E1286C6CFB00781055 /* JsonService.swift in Sources */,
+				A30A52E6286C6FE400781055 /* CountryListInteractor.swift in Sources */,
+				A30A52A3286C630600781055 /* CountryListViewController.swift in Sources */,
+				A30A52EA286C702400781055 /* CountryListRouter.swift in Sources */,
 				A30A529F286C630600781055 /* AppDelegate.swift in Sources */,
+				A30A52DE286C6B9200781055 /* Page.swift in Sources */,
 				A30A52A9286C630600781055 /* FlatstackPractice.xcdatamodeld in Sources */,
 				A30A52A1286C630600781055 /* SceneDelegate.swift in Sources */,
+				A30A52D6286C697700781055 /* Country.swift in Sources */,
+				A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,6 +688,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A30A52D1286C687800781055 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		A30A52D7286C6AED00781055 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		A30A52DA286C6B6400781055 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A30A52D2286C687800781055 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A30A52D1286C687800781055 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		A30A52D8286C6AED00781055 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A30A52D7286C6AED00781055 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		A30A52DB286C6B6400781055 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A30A52DA286C6B6400781055 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A30A52A7286C630600781055 /* FlatstackPractice.xcdatamodeld */ = {
