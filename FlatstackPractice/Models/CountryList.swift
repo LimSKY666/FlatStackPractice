@@ -8,7 +8,6 @@
 import Foundation
 
 struct CountryList {
-    
     var countries: [Country] = []
     var next: String?
 }

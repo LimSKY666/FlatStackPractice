@@ -12,8 +12,8 @@ struct Country {
     let continent: String
     let capital: String
     let population: Int
-    let description_small: String
+    let descriptionSmall: String
     let description: String
     let image: String
-    let country_info: CountryInfo
+    let countryInfo: CountryInfo
 }

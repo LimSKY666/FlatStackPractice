@@ -22,10 +22,10 @@ struct DefaultCountryParser: CountryParser {
         static let continent = "continent"
         static let capital = "capital"
         static let population = "population"
-        static let description_small = "description_small"
+        static let descriptionSmall = "description_small"
         static let description = "description"
         static let image = "image"
-        static let country_info = "country_info"
+        static let countryInfo = "country_info"
     }
     
     func parseCountries(json: JSON) -> [Country] {
@@ -42,10 +42,10 @@ struct DefaultCountryParser: CountryParser {
                        continent: json[Keys.continent].stringValue,
                        capital: json[Keys.continent].stringValue,
                        population: json[Keys.population].intValue,
-                       description_small: json[Keys.description_small].stringValue,
+                       descriptionSmall: json[Keys.descriptionSmall].stringValue,
                        description: json[Keys.description].stringValue,
                        image: json[Keys.image].stringValue,
-                       country_info: countryInfoParser.parseCountryInfo(json: json))
+                       countryInfo: countryInfoParser.parseCountryInfo(json: json))
     }
     
 }

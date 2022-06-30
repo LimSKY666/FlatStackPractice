@@ -14,7 +14,7 @@ protocol CountryService {
 
 struct DefaultCountryService: CountryService {
     
-    let listParser = DefaultListParser()
+    let listParser: DefaultListParser
     
     private func readLocalFile(forName name: String) -> Data? {
         do {
