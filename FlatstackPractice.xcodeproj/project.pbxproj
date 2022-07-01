@@ -10,7 +10,6 @@
 		A30A529F286C630600781055 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A529E286C630600781055 /* AppDelegate.swift */; };
 		A30A52A1286C630600781055 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52A0286C630600781055 /* SceneDelegate.swift */; };
 		A30A52A3286C630600781055 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52A2286C630600781055 /* CountryListViewController.swift */; };
-		A30A52A6286C630600781055 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30A52A4286C630600781055 /* Main.storyboard */; };
 		A30A52A9286C630600781055 /* FlatstackPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A30A52A7286C630600781055 /* FlatstackPractice.xcdatamodeld */; };
 		A30A52AB286C630800781055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30A52AA286C630800781055 /* Assets.xcassets */; };
 		A30A52AE286C630800781055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30A52AC286C630800781055 /* LaunchScreen.storyboard */; };
@@ -32,6 +31,7 @@
 		A3AF9A86286D97B900012648 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A85286D97B900012648 /* CountryInfo.swift */; };
 		A3AF9A88286D983F00012648 /* ListParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A87286D983F00012648 /* ListParser.swift */; };
 		A3AF9A8A286DBB9300012648 /* CountryInfoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A89286DBB9300012648 /* CountryInfoParser.swift */; };
+		A3AF9A8C286E0B5F00012648 /* CountryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A8B286E0B5E00012648 /* CountryListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,6 @@
 		A30A529E286C630600781055 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A30A52A0286C630600781055 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A30A52A2286C630600781055 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
-		A30A52A5286C630600781055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A30A52A8286C630600781055 /* FlatstackPractice.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FlatstackPractice.xcdatamodel; sourceTree = "<group>"; };
 		A30A52AA286C630800781055 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A30A52AD286C630800781055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		A3AF9A85286D97B900012648 /* CountryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfo.swift; sourceTree = "<group>"; };
 		A3AF9A87286D983F00012648 /* ListParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListParser.swift; sourceTree = "<group>"; };
 		A3AF9A89286DBB9300012648 /* CountryInfoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoParser.swift; sourceTree = "<group>"; };
+		A3AF9A8B286E0B5E00012648 /* CountryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,7 +192,6 @@
 		A30A52E3286C6F6E00781055 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				A30A52A4286C630600781055 /* Main.storyboard */,
 				A30A52E4286C6FAF00781055 /* CountryListModule */,
 			);
 			path = Scenes;
@@ -201,11 +200,13 @@
 		A30A52E4286C6FAF00781055 /* CountryListModule */ = {
 			isa = PBXGroup;
 			children = (
+				A3AF9A8D286EE41100012648 /* Models */,
 				A30A52E5286C6FE400781055 /* CountryListInteractor.swift */,
 				A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */,
 				A30A52E9286C702400781055 /* CountryListRouter.swift */,
 				A30A52A2286C630600781055 /* CountryListViewController.swift */,
 				A3AF9A83286D951100012648 /* Assembly.swift */,
+				A3AF9A8B286E0B5E00012648 /* CountryListTableViewCell.swift */,
 			);
 			path = CountryListModule;
 			sourceTree = "<group>";
@@ -218,6 +219,13 @@
 				A3AF9A87286D983F00012648 /* ListParser.swift */,
 			);
 			path = Parsers;
+			sourceTree = "<group>";
+		};
+		A3AF9A8D286EE41100012648 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +345,6 @@
 				A30A52EC286C7DD400781055 /* page1.json in Resources */,
 				A30A52AE286C630800781055 /* LaunchScreen.storyboard in Resources */,
 				A30A52AB286C630800781055 /* Assets.xcassets in Resources */,
-				A30A52A6286C630600781055 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +381,7 @@
 				A30A52DE286C6B9200781055 /* CountryList.swift in Sources */,
 				A30A52A9286C630600781055 /* FlatstackPractice.xcdatamodeld in Sources */,
 				A30A52A1286C630600781055 /* SceneDelegate.swift in Sources */,
+				A3AF9A8C286E0B5F00012648 /* CountryListTableViewCell.swift in Sources */,
 				A30A52D6286C697700781055 /* Country.swift in Sources */,
 				A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */,
 				A3AF9A8A286DBB9300012648 /* CountryInfoParser.swift in Sources */,
@@ -413,14 +421,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A30A52A4286C630600781055 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A30A52A5286C630600781055 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A30A52AC286C630800781055 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -558,7 +558,6 @@
 				INFOPLIST_FILE = FlatstackPractice/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -587,7 +586,6 @@
 				INFOPLIST_FILE = FlatstackPractice/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
