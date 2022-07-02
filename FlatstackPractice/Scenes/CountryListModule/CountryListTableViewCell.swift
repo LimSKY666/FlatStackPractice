@@ -14,7 +14,8 @@ class CountryListTableViewCell: UITableViewCell {
     let flagImageView = UIImageView()
     let nameLabel = UILabel()
     let capitalLabel = UILabel()
-    let descriptionTextField = UITextField()
+    let descriptionTextField = UILabel()
+    let arrowImageView = UIImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -36,33 +37,57 @@ class CountryListTableViewCell: UITableViewCell {
     
     func conigureNameLabel() {
         addSubview(nameLabel)
+        nameLabel.font = UIFont(name: "Helvetica", size: 17)
         nameLabel.snp.makeConstraints { make in
             make.height.equalTo(20)
-            make.left.equalTo(flagImageView).inset(10)
-            make.bottom.equalTo(capitalLabel).inset(5)
+            make.left.equalTo(flagImageView).inset(60)
+            make.top.equalTo(15)
         }
     }
     
     func configureCapitalLabel() {
         addSubview(capitalLabel)
+        capitalLabel.font = UIFont(name: "Helvetica", size: 14)
+        capitalLabel.textColor = .gray
         capitalLabel.snp.makeConstraints { make in
-            make.top.equalTo(flagImageView).inset(10)
+            make.height.equalTo(16)
+            make.top.equalTo(nameLabel).inset(19)
+            make.left.equalTo(flagImageView).inset(60)
         }
     }
     
-    func configureDescriptionTextField() {
+    func configureDescriptionLabel() {
         addSubview(descriptionTextField)
+        descriptionTextField.font = UIFont(name: "Helvetica", size: 15)
+        descriptionTextField.numberOfLines = 0
+        descriptionTextField.snp.makeConstraints { make in
+            make.left.right.equalToSuperview().inset(15)
+            make.top.equalTo(flagImageView).inset(45)
+            make.bottom.equalToSuperview().inset(10)
+        }
+    }
+    
+    func configureArrowImageView() {
+        addSubview(arrowImageView)
+        arrowImageView.image = UIImage(named: "arrow")
+        arrowImageView.snp.makeConstraints { make in
+            make.height.equalTo(13)
+            make.width.equalTo(8)
+            make.top.equalToSuperview().inset(24)
+            make.right.equalToSuperview().inset(15)
+        }
     }
     
     func configure() {
         configureFlagImageView()
         conigureNameLabel()
         configureCapitalLabel()
-        configureDescriptionTextField()
+        configureDescriptionLabel()
+        configureArrowImageView()
     }
     
     func configureCellData(country: Country) {
-        flagImageView.kf.setImage(with: URL(string: country.image))
+        flagImageView.kf.setImage(with: URL(string: country.countryInfo.flag))
         nameLabel.text = country.name
         capitalLabel.text = country.capital
         descriptionTextField.text = country.descriptionSmall

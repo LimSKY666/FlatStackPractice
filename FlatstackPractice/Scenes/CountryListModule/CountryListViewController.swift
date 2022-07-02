@@ -21,14 +21,13 @@ class CountryListViewController: UIViewController {
     }()
     
     let countryArray: [Country] = [
-        Country(name: "Абхазия", continent: "Eurasia", capital: "Сухум", population: 10000, descriptionSmall: "Республика Абхазия - частично признанное независимое государство. Кем не признано - для тех это Автономная Республика Абхазия в составе Грузии, причем оккупированная Россией.", description: "as", image: "http://landmarks.ru/wp-content/uploads/2015/05/abhaziya.jpg", countryInfo: CountryInfo(images: [], flag: "https://cdn.pixabay.com/photo/2015/10/24/21/30/abkhazia-1005013_960_720.png")),
-        Country(name: "Абхазия", continent: "Eurasia", capital: "Сухум", population: 10000, descriptionSmall: "Республика Абхазия - частично признанное независимое государство. Кем не признано - для тех это Автономная Республика Абхазия в составе Грузии, причем оккупированная Россией.", description: "as", image: "http://landmarks.ru/wp-content/uploads/2015/05/abhaziya.jpg", countryInfo: CountryInfo(images: [], flag: "https://cdn.pixabay.com/photo/2015/10/24/21/30/abkhazia-1005013_960_720.png")),
-        Country(name: "Абхазия", continent: "Eurasia", capital: "Сухум", population: 10000, descriptionSmall: "Республика Абхазия - частично признанное независимое государство. Кем не признано - для тех это Автономная Республика Абхазия в составе Грузии, причем оккупированная Россией.", description: "as", image: "http://landmarks.ru/wp-content/uploads/2015/05/abhaziya.jpg", countryInfo: CountryInfo(images: [], flag: "https://cdn.pixabay.com/photo/2015/10/24/21/30/abkhazia-1005013_960_720.png")),
+        Country(name: "Абхазия", continent: "Eurasia", capital: "Сухум", population: 10000, descriptionSmall: "Республика Абхазия - частично признанное независимое государство. Кем не признано - для тех это Автономная Республика Абхазия в составе Грузии, причем оккупированная Россией.", description: "as", image: "http://landmarks.ru/wp-content/uploads/2015/05/abhaziya.jpg", countryInfo: CountryInfo(images: [], flag: "http://www.flagistrany.ru/data/flags/ultra/by.png")),
+        Country(name: "Абхазия", continent: "Eurasia", capital: "Сухум", population: 10000, descriptionSmall: "Республика Абхазия - частично признанное независимое государство. Кем не признано - для тех это Автономная Республика Абхазия в составе Грузии, причем оккупированная Россией.", description: "as", image: "http://landmarks.ru/wp-content/uploads/2015/05/abhaziya.jpg", countryInfo: CountryInfo(images: [], flag: "http://www.flagistrany.ru/data/flags/ultra/by.png")),
+        Country(name: "Абхазия", continent: "Eurasia", capital: "Сухум", population: 10000, descriptionSmall: "", description: "as", image: "http://landmarks.ru/wp-content/uploads/2015/05/abhaziya.jpg", countryInfo: CountryInfo(images: [], flag: "http://www.flagistrany.ru/data/flags/ultra/by.png")),
     ]
     
     override func loadView() {
         self.view = UIView()
-        self.view.backgroundColor = .white
     }
     
     override func viewDidLoad() {
@@ -38,9 +37,12 @@ class CountryListViewController: UIViewController {
     
     private func configureTableView() {
         view.addSubview(tableView)
-        setTableViewDelegates()
-        tableView.frame = view.bounds
+        tableView.estimatedRowHeight = 250
         tableView.rowHeight = UITableView.automaticDimension
+        tableView.snp.makeConstraints { make in
+            make.top.left.right.bottom.equalToSuperview()
+        }
+        setTableViewDelegates()
     }
     
     private func setTableViewDelegates() {
@@ -66,5 +68,6 @@ extension CountryListViewController: UITableViewDelegate, UITableViewDataSource 
         cell.configureCellData(country: country)
         return cell
     }
+    
 }
 
