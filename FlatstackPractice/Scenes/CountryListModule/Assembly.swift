@@ -15,6 +15,10 @@ protocol Assembly {
 struct DefaultAssembly: Assembly {
 
     func assemble() -> UIViewController {
+        let countryInfoParser = DefaultCountryInfoParser()
+        let countryParser = DefaultCountryParser(countryInfoParser: countryInfoParser)
+        let countryListParser = DefaultListParser(countryParser: countryParser)
+        let countryService = DefaultCountryService(listParser: countryListParser)
         let viewController = CountryListViewController()
         let interactor = CountryListInteractor()
         let presenter = CountryListPresenter()
@@ -23,6 +27,7 @@ struct DefaultAssembly: Assembly {
         viewController.router = router
         presenter.countryListViewController = viewController
         interactor.presenter = presenter
+        interactor.countryService = countryService
         return viewController
     }
 }

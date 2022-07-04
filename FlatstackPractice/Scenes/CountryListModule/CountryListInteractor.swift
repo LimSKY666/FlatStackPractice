@@ -15,10 +15,10 @@ class CountryListInteractor: CountryListBusinessLogic {
     
     var presenter: CountryListPresentationLogic?
     var countries: [Country]?
-    var countryService = DefaultCountryService()
+    var countryService: CountryService?
     
     func fetchCountryList(request: FetchCountries.Request) {
-        self.countries = countryService.fetchLocalCountryList()?.countries
+        self.countries = countryService?.fetchLocalCountryList()?.countries
         let response = FetchCountries.Response(countries: countries!)
         self.presenter?.presentFetchedCountries(response: response)
     }
