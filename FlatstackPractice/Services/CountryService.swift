@@ -9,12 +9,12 @@ import Foundation
 import SwiftyJSON
 
 protocol CountryService {
-    
+    func fetchLocalCountryList() -> CountryList?
 }
 
 struct DefaultCountryService: CountryService {
     
-    let listParser: DefaultListParser
+    let listParser = DefaultListParser()
     
     private func readLocalFile(forName name: String) -> Data? {
         do {

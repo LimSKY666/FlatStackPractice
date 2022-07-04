@@ -86,11 +86,11 @@ class CountryListTableViewCell: UITableViewCell {
         configureArrowImageView()
     }
     
-    func configureCellData(country: Country) {
-        flagImageView.kf.setImage(with: URL(string: country.countryInfo.flag))
-        nameLabel.text = country.name
-        capitalLabel.text = country.capital
-        descriptionTextField.text = country.descriptionSmall
+    func configureCellData(viewModel: FetchCountries.ViewModel.DisplayedCountries) {
+        flagImageView.kf.setImage(with: URL(string: viewModel.flag))
+        nameLabel.text = viewModel.name
+        capitalLabel.text = viewModel.capital
+        descriptionTextField.text = viewModel.description
     }
     
 }

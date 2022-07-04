@@ -14,7 +14,7 @@ protocol ListParser {
 
 struct DefaultListParser: ListParser {
     
-    let countryParser: DefaultCountryParser
+    let countryParser = DefaultCountryParser()
     
     private enum Keys {
         static let countries = "countries"
