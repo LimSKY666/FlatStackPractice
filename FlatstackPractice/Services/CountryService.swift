@@ -9,7 +9,7 @@ import Foundation
 import SwiftyJSON
 
 protocol CountryService {
-    
+    func fetchLocalCountryList() -> CountryList?
 }
 
 struct DefaultCountryService: CountryService {

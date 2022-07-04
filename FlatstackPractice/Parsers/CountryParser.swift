@@ -15,7 +15,7 @@ protocol CountryParser {
 
 struct DefaultCountryParser: CountryParser {
     
-    let countryInfoParser = DefaultCountryInfoParser()
+    let countryInfoParser: DefaultCountryInfoParser
     
     private enum Keys {
         static let name = "name"

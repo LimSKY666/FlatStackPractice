@@ -11,6 +11,6 @@ protocol CountryListRoutingLogic {
     
 }
 
-class CountryListRouter {
+struct CountryListRouter: CountryListRoutingLogic {
     
 }

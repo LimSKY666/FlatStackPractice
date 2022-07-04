@@ -32,6 +32,7 @@
 		A3AF9A8A286DBB9300012648 /* CountryInfoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A89286DBB9300012648 /* CountryInfoParser.swift */; };
 		A3AF9A8C286E0B5F00012648 /* CountryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A8B286E0B5E00012648 /* CountryListTableViewCell.swift */; };
 		A3AF9A8F286F397200012648 /* page1.json in Resources */ = {isa = PBXBuildFile; fileRef = A3AF9A8E286F397200012648 /* page1.json */; };
+		A3AF9A982872DFBF00012648 /* CountryListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A972872DFBF00012648 /* CountryListModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		A3AF9A89286DBB9300012648 /* CountryInfoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoParser.swift; sourceTree = "<group>"; };
 		A3AF9A8B286E0B5E00012648 /* CountryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListTableViewCell.swift; sourceTree = "<group>"; };
 		A3AF9A8E286F397200012648 /* page1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = page1.json; sourceTree = "<group>"; };
+		A3AF9A972872DFBF00012648 /* CountryListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				A30A52A2286C630600781055 /* CountryListViewController.swift */,
 				A3AF9A83286D951100012648 /* Assembly.swift */,
 				A3AF9A8B286E0B5E00012648 /* CountryListTableViewCell.swift */,
+				A3AF9A972872DFBF00012648 /* CountryListModels.swift */,
 			);
 			path = CountryListModule;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			files = (
 				A30A52E1286C6CFB00781055 /* CountryService.swift in Sources */,
 				A30A52E6286C6FE400781055 /* CountryListInteractor.swift in Sources */,
+				A3AF9A982872DFBF00012648 /* CountryListModels.swift in Sources */,
 				A3AF9A86286D97B900012648 /* CountryInfo.swift in Sources */,
 				A30A52A3286C630600781055 /* CountryListViewController.swift in Sources */,
 				A3AF9A84286D951100012648 /* Assembly.swift in Sources */,
