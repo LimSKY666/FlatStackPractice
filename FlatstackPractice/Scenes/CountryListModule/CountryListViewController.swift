@@ -55,12 +55,14 @@ class CountryListViewController: UIViewController, CountryListDisplayLogic {
     
     func fetchCountries() {
         let request = FetchCountries.Request()
-        interactor?.fetchCountryList(request: request)
+        interactor?.fetchBackendCountryList(request: request)
     }
     
     func displayFetchedCountries(viewModel: FetchCountries.ViewModel) {
         displayedCountries = viewModel.displayedCountries
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 
