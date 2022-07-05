@@ -25,6 +25,7 @@
 		A30A52E6286C6FE400781055 /* CountryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E5286C6FE400781055 /* CountryListInteractor.swift */; };
 		A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */; };
 		A30A52EA286C702400781055 /* CountryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E9286C702400781055 /* CountryListRouter.swift */; };
+		A36091D828742F32001D65D7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36091D728742F32001D65D7 /* Configuration.swift */; };
 		A3AF9A82286D937300012648 /* CountryParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A81286D937300012648 /* CountryParser.swift */; };
 		A3AF9A84286D951100012648 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A83286D951100012648 /* Assembly.swift */; };
 		A3AF9A86286D97B900012648 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF9A85286D97B900012648 /* CountryInfo.swift */; };
@@ -72,6 +73,7 @@
 		A30A52E5286C6FE400781055 /* CountryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractor.swift; sourceTree = "<group>"; };
 		A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListPresenter.swift; sourceTree = "<group>"; };
 		A30A52E9286C702400781055 /* CountryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListRouter.swift; sourceTree = "<group>"; };
+		A36091D728742F32001D65D7 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A3AF9A81286D937300012648 /* CountryParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryParser.swift; sourceTree = "<group>"; };
 		A3AF9A83286D951100012648 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		A3AF9A85286D97B900012648 /* CountryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfo.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		A30A529D286C630600781055 /* FlatstackPractice */ = {
 			isa = PBXGroup;
 			children = (
+				A36091D628742F21001D65D7 /* Configurations */,
 				A3AF9A80286D934D00012648 /* Parsers */,
 				A30A52E3286C6F6E00781055 /* Scenes */,
 				A30A52E2286C6D3F00781055 /* Resources */,
@@ -211,6 +214,14 @@
 				A3AF9A972872DFBF00012648 /* CountryListModels.swift */,
 			);
 			path = CountryListModule;
+			sourceTree = "<group>";
+		};
+		A36091D628742F21001D65D7 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				A36091D728742F32001D65D7 /* Configuration.swift */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 		A3AF9A80286D934D00012648 /* Parsers */ = {
@@ -376,6 +387,7 @@
 				A3AF9A88286D983F00012648 /* ListParser.swift in Sources */,
 				A30A52DE286C6B9200781055 /* CountryList.swift in Sources */,
 				A30A52A9286C630600781055 /* FlatstackPractice.xcdatamodeld in Sources */,
+				A36091D828742F32001D65D7 /* Configuration.swift in Sources */,
 				A30A52A1286C630600781055 /* SceneDelegate.swift in Sources */,
 				A3AF9A8C286E0B5F00012648 /* CountryListTableViewCell.swift in Sources */,
 				A30A52D6286C697700781055 /* Country.swift in Sources */,

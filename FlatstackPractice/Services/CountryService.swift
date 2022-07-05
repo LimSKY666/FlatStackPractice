@@ -10,11 +10,14 @@ import SwiftyJSON
 
 protocol CountryService {
     func fetchLocalCountryList() -> CountryList?
+    func fetchCountryList(stringURL: String, completion: @escaping (CountryList?, Error?) -> Void)
 }
 
 struct DefaultCountryService: CountryService {
     
     let listParser: DefaultListParser
+    let configuration = URLSessionConfiguration.default
+    let operationQueue = OperationQueue()
     
     private func readLocalFile(forName name: String) -> Data? {
         do {
@@ -36,5 +39,20 @@ struct DefaultCountryService: CountryService {
             }
         }
         return nil
+    }
+    
+    func fetchCountryList(stringURL: String, completion: @escaping (CountryList?, Error?) -> Void) {
+        let session = URLSession(configuration: self.configuration)
+        if let url = URL(string: stringURL) {
+            var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData)
+            request.httpMethod = "GET"
+            session.dataTask(with: request) { data, response, error in
+                if let error = error {
+                    completion(nil, error)
+                } else if let data = data, let json = try? JSON(data: data) {
+                    completion(listParser.parseList(json: json), nil)
+                }
+            }.resume()
+        }
     }
 }
