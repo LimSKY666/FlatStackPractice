@@ -15,9 +15,9 @@ protocol CountryListBusinessLogic {
 class CountryListInteractor: CountryListBusinessLogic {
     
     var presenter: CountryListPresentationLogic?
-    var countries: [Country] = []
+    var countryList: CountryList?
     var countryService: CountryService?
-
+    
     func fetchCountryList(request: FetchCountries.Request) {
         guard let countries = countryService?.fetchLocalCountryList()?.countries else { return }
         let response = FetchCountries.Response(countries: countries)
@@ -25,15 +25,24 @@ class CountryListInteractor: CountryListBusinessLogic {
     }
     
     func fetchBackendCountryList(request: FetchCountries.Request) {
-        countryService?.fetchCountryList(stringURL: Configuration.baseURL, completion: { [weak self] countryList, error in
-            if let countryList = countryList {
-                self?.countries = countryList.countries
-                
-            } else if let error = error {
-                print(error.localizedDescription)
-            }
-            let response = FetchCountries.Response(countries: self?.countries ?? [])
-            self?.presenter?.presentFetchedCountries(response: response)
-        })
+        var stringURL: String?
+        if countryList == nil {
+            stringURL = Configuration.baseURL
+        } else {
+            stringURL = countryList?.next
+        }
+        if let stringURL = stringURL, !stringURL.isEmpty {
+            presenter?.presentLoadingMoreState()
+            countryService?.fetchCountryList(stringURL: stringURL, completion: { [weak self]
+                countryList, error in
+                if let countryList = countryList {
+                    self?.countryList = countryList
+                } else if let error = error {
+                    print(error.localizedDescription)
+                }
+                let response = FetchCountries.Response(countries: self?.countryList?.countries ?? [])
+                self?.presenter?.presentFetchedCountries(response: response)
+            })
+        }
     }
 }

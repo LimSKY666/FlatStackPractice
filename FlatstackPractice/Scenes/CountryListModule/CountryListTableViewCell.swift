@@ -16,6 +16,7 @@ class CountryListTableViewCell: UITableViewCell {
     let capitalLabel = UILabel()
     let descriptionTextField = UILabel()
     let arrowImageView = UIImageView()
+    let activityIndicator = UIActivityIndicatorView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -26,7 +27,7 @@ class CountryListTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configureFlagImageView() {
+    private func configureFlagImageView() {
         addSubview(flagImageView)
         flagImageView.snp.makeConstraints { make in
             make.height.equalTo(34)
@@ -35,7 +36,7 @@ class CountryListTableViewCell: UITableViewCell {
         }
     }
     
-    func conigureNameLabel() {
+    private func conigureNameLabel() {
         addSubview(nameLabel)
         nameLabel.font = UIFont(name: "Helvetica", size: 17)
         nameLabel.snp.makeConstraints { make in
@@ -45,7 +46,7 @@ class CountryListTableViewCell: UITableViewCell {
         }
     }
     
-    func configureCapitalLabel() {
+    private func configureCapitalLabel() {
         addSubview(capitalLabel)
         capitalLabel.font = UIFont(name: "Helvetica", size: 14)
         capitalLabel.textColor = .gray
@@ -56,7 +57,7 @@ class CountryListTableViewCell: UITableViewCell {
         }
     }
     
-    func configureDescriptionLabel() {
+    private func configureDescriptionLabel() {
         addSubview(descriptionTextField)
         descriptionTextField.font = UIFont(name: "Helvetica", size: 15)
         descriptionTextField.numberOfLines = 0
@@ -67,7 +68,7 @@ class CountryListTableViewCell: UITableViewCell {
         }
     }
     
-    func configureArrowImageView() {
+    private func configureArrowImageView() {
         addSubview(arrowImageView)
         arrowImageView.image = UIImage(named: "arrow")
         arrowImageView.snp.makeConstraints { make in
@@ -78,7 +79,7 @@ class CountryListTableViewCell: UITableViewCell {
         }
     }
     
-    func configure() {
+    private func configure() {
         configureFlagImageView()
         conigureNameLabel()
         configureCapitalLabel()
