@@ -6,9 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 protocol CountryListPresentationLogic {
     func presentFetchedCountries(response: FetchCountries.Response)
+    func presentLoadingMoreState()
 }
 
 class CountryListPresenter: CountryListPresentationLogic {
@@ -23,5 +25,10 @@ class CountryListPresenter: CountryListPresentationLogic {
         }
         let viewModel = FetchCountries.ViewModel(displayedCountries: displayedCountries)
         countryListViewController?.displayFetchedCountries(viewModel: viewModel)
+        countryListViewController?.hideFooter()
+    }
+    
+    func presentLoadingMoreState() {
+        countryListViewController?.displayTableFooterView()
     }
 }
