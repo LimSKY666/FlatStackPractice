@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol CountryListDisplayLogic: AnyObject {
-    func displayFetchedCountries(viewModel: FetchCountries.ViewModel)
+    func displayFetchedCountries(viewModel: CountryListModel.ViewModel)
     func hideFooter()
     func displayTableFooterView()
 }
@@ -18,12 +18,18 @@ class CountryListViewController: UIViewController, CountryListDisplayLogic {
 
     var interactor: CountryListBusinessLogic?
     var router: CountryListRouter?
-    var displayedCountries: [FetchCountries.ViewModel.DisplayedCountries] = []
+    var displayedCountries: [CountryListModel.ViewModel.DisplayedCountries] = []
 
     var tableView: UITableView = {
         let table = UITableView()
         table.register(CountryListTableViewCell.self, forCellReuseIdentifier: "cell")
         return table
+    }()
+    
+    let refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(nil, action: #selector(refreshTableView(sender:)), for: .valueChanged)
+        return refreshControl
     }()
 
     override func loadView() {
@@ -58,6 +64,7 @@ class CountryListViewController: UIViewController, CountryListDisplayLogic {
         tableView.snp.makeConstraints { make in
             make.top.left.right.bottom.equalToSuperview()
         }
+        tableView.refreshControl = refreshControl
         tableView.dataSource = self
         tableView.delegate = self
     }
@@ -82,15 +89,21 @@ class CountryListViewController: UIViewController, CountryListDisplayLogic {
     }
     
     func fetchCountries() {
-        let request = FetchCountries.Request()
+        let request = CountryListModel.FetchCountries.Request()
         interactor?.fetchBackendCountryList(request: request)
     }
     
-    func displayFetchedCountries(viewModel: FetchCountries.ViewModel) {
-        displayedCountries.append(contentsOf: viewModel.displayedCountries)
+    func displayFetchedCountries(viewModel: CountryListModel.ViewModel) {
+        displayedCountries = viewModel.displayedCountries
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    @objc private func refreshTableView(sender: UIRefreshControl) {
+        let request = CountryListModel.RefreshCountries.Request()
+        interactor?.refreshCountryList(request: request)
+        tableView.refreshControl?.endRefreshing()
     }
 }
 

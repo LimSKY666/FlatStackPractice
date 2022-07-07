@@ -7,10 +7,21 @@
 
 import Foundation
 
-enum FetchCountries {
+enum CountryListModel {
     
-    struct Request {
+    enum FetchCountries {
         
+        struct Request {
+            
+        }
+        
+    }
+    
+    enum RefreshCountries {
+        
+        struct Request {
+            
+        }
     }
     
     struct Response {
