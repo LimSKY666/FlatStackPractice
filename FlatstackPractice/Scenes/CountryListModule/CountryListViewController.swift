@@ -17,7 +17,7 @@ protocol CountryListDisplayLogic: AnyObject {
 class CountryListViewController: UIViewController, CountryListDisplayLogic {
 
     var interactor: CountryListBusinessLogic?
-    var router: CountryListRouter?
+    var router: (CountryListRoutingLogic & CountryListDataPassing)?
     var displayedCountries: [CountryListModel.ViewModel.DisplayedCountries] = []
 
     var tableView: UITableView = {
@@ -105,6 +105,7 @@ class CountryListViewController: UIViewController, CountryListDisplayLogic {
         interactor?.refreshCountryList(request: request)
         tableView.refreshControl?.endRefreshing()
     }
+    
 }
 
 extension CountryListViewController: UITableViewDelegate, UITableViewDataSource {
@@ -115,6 +116,7 @@ extension CountryListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        router?.routeToDetailsCountry(index: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
