@@ -87,7 +87,7 @@ class CountryListTableViewCell: UITableViewCell {
         configureArrowImageView()
     }
     
-    func configureCellData(viewModel: FetchCountries.ViewModel.DisplayedCountries) {
+    func configureCellData(viewModel: CountryListModel.ViewModel.DisplayedCountries) {
         flagImageView.kf.setImage(with: URL(string: viewModel.flag))
         nameLabel.text = viewModel.name
         capitalLabel.text = viewModel.capital

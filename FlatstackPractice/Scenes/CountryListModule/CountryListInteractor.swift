@@ -8,8 +8,9 @@
 import Foundation
 
 protocol CountryListBusinessLogic {
-    func fetchCountryList(request: FetchCountries.Request)
-    func fetchBackendCountryList(request: FetchCountries.Request)
+    func fetchCountryList(request: CountryListModel.FetchCountries.Request)
+    func fetchBackendCountryList(request: CountryListModel.FetchCountries.Request)
+    func refreshCountryList(request: CountryListModel.RefreshCountries.Request)
 }
 
 class CountryListInteractor: CountryListBusinessLogic {
@@ -18,13 +19,13 @@ class CountryListInteractor: CountryListBusinessLogic {
     var countryList: CountryList?
     var countryService: CountryService?
     
-    func fetchCountryList(request: FetchCountries.Request) {
+    func fetchCountryList(request: CountryListModel.FetchCountries.Request) {
         guard let countries = countryService?.fetchLocalCountryList()?.countries else { return }
-        let response = FetchCountries.Response(countries: countries)
+        let response = CountryListModel.Response(countries: countries)
         presenter?.presentFetchedCountries(response: response)
     }
     
-    func fetchBackendCountryList(request: FetchCountries.Request) {
+    func fetchBackendCountryList(request: CountryListModel.FetchCountries.Request) {
         var stringURL: String?
         if countryList == nil {
             stringURL = Configuration.baseURL
@@ -33,16 +34,43 @@ class CountryListInteractor: CountryListBusinessLogic {
         }
         if let stringURL = stringURL, !stringURL.isEmpty {
             presenter?.presentLoadingMoreState()
-            countryService?.fetchCountryList(stringURL: stringURL, completion: { [weak self]
-                countryList, error in
-                if let countryList = countryList {
-                    self?.countryList = countryList
-                } else if let error = error {
-                    print(error.localizedDescription)
+            fetchCountries(stringURL: stringURL, completion: { [weak self] recievedCountryList in
+                guard let self = self else { return }
+                guard let recievedCountryList = recievedCountryList else { return }
+                if var countryList = self.countryList {
+                    countryList.countries.append(contentsOf: recievedCountryList.countries)
+                    countryList.next = recievedCountryList.next
+                    self.countryList = countryList
+                } else {
+                    self.countryList = recievedCountryList
                 }
-                let response = FetchCountries.Response(countries: self?.countryList?.countries ?? [])
-                self?.presenter?.presentFetchedCountries(response: response)
+                let response = CountryListModel.Response(countries: self.countryList?.countries ?? [])
+                self.presenter?.presentFetchedCountries(response: response)
             })
         }
     }
+    
+    func refreshCountryList(request: CountryListModel.RefreshCountries.Request) {
+        fetchCountries(stringURL: Configuration.baseURL, completion: { [weak self] countryList in
+            guard let self = self else { return }
+            self.countryList?.countries = countryList?.countries ?? []
+            let response = CountryListModel.Response(countries: self.countryList?.countries ?? [])
+            self.presenter?.presentFetchedCountries(response: response)
+        })
+    }
+    
+    private func fetchCountries(stringURL: String, completion: @escaping (CountryList?) -> Void) {
+        countryService?.fetchCountryList(stringURL: stringURL, completion: {
+            countryList, error in
+            if let countryList = countryList {
+                completion(countryList)
+            } else if let error = error {
+                print(error)
+            }
+        })
+    }
+    
 }
+                                            
+                                             
+                
