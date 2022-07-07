@@ -8,13 +8,12 @@
 import Foundation
 import UIKit
 
-protocol Assembly {
-    func assemble() -> UIViewController
+protocol CountryListModuleAssembly {
+    func assemble() -> CountryListViewController
 }
 
-struct DefaultAssembly: Assembly {
-
-    func assemble() -> UIViewController {
+struct DefaultCountryListAssembly: CountryListModuleAssembly {
+    func assemble() -> CountryListViewController {
         let countryInfoParser = DefaultCountryInfoParser()
         let countryParser = DefaultCountryParser(countryInfoParser: countryInfoParser)
         let countryListParser = DefaultListParser(countryParser: countryParser)
@@ -28,6 +27,8 @@ struct DefaultAssembly: Assembly {
         presenter.countryListViewController = viewController
         interactor.presenter = presenter
         interactor.countryService = countryService
+        router.viewController = viewController
+        router.dataStore = interactor
         return viewController
     }
 }

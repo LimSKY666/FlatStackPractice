@@ -13,7 +13,12 @@ protocol CountryListBusinessLogic {
     func refreshCountryList(request: CountryListModel.RefreshCountries.Request)
 }
 
-class CountryListInteractor: CountryListBusinessLogic {
+protocol CountryListDataStore
+{
+  var countryList: CountryList? { get }
+}
+
+class CountryListInteractor: CountryListBusinessLogic, CountryListDataStore {
     
     var presenter: CountryListPresentationLogic?
     var countryList: CountryList?
