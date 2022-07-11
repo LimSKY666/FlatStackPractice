@@ -17,13 +17,10 @@ enum DetailsCountryModels {
     }
     
     struct ViewModel {
-      struct DisplayedCountry {
         var name: String
         var capital: String
         var population: Int
         var continent: String
         var description: String
-      }
-      var displayedCountry: DisplayedCountry
     }
 }

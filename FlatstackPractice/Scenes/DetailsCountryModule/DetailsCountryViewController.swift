@@ -236,7 +236,7 @@ class DetailsCountryViewController: UIViewController, DetailsCountryDisplayLogic
     }
     
     func displayCountry(viewModel: DetailsCountryModels.ViewModel) {
-        let displayCountry = viewModel.displayedCountry
+        let displayCountry = viewModel
         nameLabel.text = displayCountry.name
         capitalNameLabel.text = displayCountry.capital
         continentNameLabel.text = displayCountry.continent
