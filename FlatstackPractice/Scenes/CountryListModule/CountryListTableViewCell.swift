@@ -14,7 +14,7 @@ class CountryListTableViewCell: UITableViewCell {
     let flagImageView = UIImageView()
     let nameLabel = UILabel()
     let capitalLabel = UILabel()
-    let descriptionTextField = UILabel()
+    let descriptionLabel = UILabel()
     let arrowImageView = UIImageView()
     let activityIndicator = UIActivityIndicatorView()
     
@@ -58,10 +58,10 @@ class CountryListTableViewCell: UITableViewCell {
     }
     
     private func configureDescriptionLabel() {
-        addSubview(descriptionTextField)
-        descriptionTextField.font = UIFont(name: "Helvetica", size: 15)
-        descriptionTextField.numberOfLines = 0
-        descriptionTextField.snp.makeConstraints { make in
+        addSubview(descriptionLabel)
+        descriptionLabel.font = UIFont(name: "Helvetica", size: 15)
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.snp.makeConstraints { make in
             make.left.right.equalToSuperview().inset(15)
             make.top.equalTo(flagImageView).inset(45)
             make.bottom.equalToSuperview().inset(10)
@@ -87,11 +87,11 @@ class CountryListTableViewCell: UITableViewCell {
         configureArrowImageView()
     }
     
-    func configureCellData(viewModel: CountryListModel.ViewModel.DisplayedCountries) {
+    func configureCellData(viewModel: CountryListModels.ViewModel.DisplayedCountries) {
         flagImageView.kf.setImage(with: URL(string: viewModel.flag))
         nameLabel.text = viewModel.name
         capitalLabel.text = viewModel.capital
-        descriptionTextField.text = viewModel.description
+        descriptionLabel.text = viewModel.description
     }
     
 }

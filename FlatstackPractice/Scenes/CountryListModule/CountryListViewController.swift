@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol CountryListDisplayLogic: AnyObject {
-    func displayFetchedCountries(viewModel: CountryListModel.ViewModel)
+    func displayFetchedCountries(viewModel: CountryListModels.ViewModel)
     func hideFooter()
     func displayTableFooterView()
 }
@@ -18,7 +18,7 @@ class CountryListViewController: UIViewController, CountryListDisplayLogic {
 
     var interactor: CountryListBusinessLogic?
     var router: (CountryListRoutingLogic & CountryListDataPassing)?
-    var displayedCountries: [CountryListModel.ViewModel.DisplayedCountries] = []
+    var displayedCountries: [CountryListModels.ViewModel.DisplayedCountries] = []
 
     var tableView: UITableView = {
         let table = UITableView()
@@ -89,11 +89,11 @@ class CountryListViewController: UIViewController, CountryListDisplayLogic {
     }
     
     func fetchCountries() {
-        let request = CountryListModel.FetchCountries.Request()
+        let request = CountryListModels.FetchCountries.Request()
         interactor?.fetchBackendCountryList(request: request)
     }
     
-    func displayFetchedCountries(viewModel: CountryListModel.ViewModel) {
+    func displayFetchedCountries(viewModel: CountryListModels.ViewModel) {
         displayedCountries = viewModel.displayedCountries
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -101,7 +101,7 @@ class CountryListViewController: UIViewController, CountryListDisplayLogic {
     }
     
     @objc private func refreshTableView(sender: UIRefreshControl) {
-        let request = CountryListModel.RefreshCountries.Request()
+        let request = CountryListModels.RefreshCountries.Request()
         interactor?.refreshCountryList(request: request)
         tableView.refreshControl?.endRefreshing()
     }

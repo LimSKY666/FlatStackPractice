@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CountryListModel {
+enum CountryListModels {
     
     enum FetchCountries {
         

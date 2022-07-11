@@ -15,7 +15,7 @@ protocol CountryParser {
 
 struct DefaultCountryParser: CountryParser {
     
-    let countryInfoParser: DefaultCountryInfoParser
+    let countryInfoParser: CountryInfoParser
     
     private enum Keys {
         static let name = "name"
@@ -40,7 +40,7 @@ struct DefaultCountryParser: CountryParser {
         
         return Country(name: json[Keys.name].stringValue,
                        continent: json[Keys.continent].stringValue,
-                       capital: json[Keys.continent].stringValue,
+                       capital: json[Keys.capital].stringValue,
                        population: json[Keys.population].intValue,
                        descriptionSmall: json[Keys.descriptionSmall].stringValue,
                        description: json[Keys.description].stringValue,

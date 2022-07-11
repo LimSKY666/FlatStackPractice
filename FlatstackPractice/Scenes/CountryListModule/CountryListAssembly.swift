@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 protocol CountryListModuleAssembly {
-    func assemble() -> CountryListViewController
+    func assemble() -> UIViewController
 }
 
 struct DefaultCountryListAssembly: CountryListModuleAssembly {
-    func assemble() -> CountryListViewController {
+    func assemble() -> UIViewController {
         let countryInfoParser = DefaultCountryInfoParser()
         let countryParser = DefaultCountryParser(countryInfoParser: countryInfoParser)
         let countryListParser = DefaultListParser(countryParser: countryParser)
