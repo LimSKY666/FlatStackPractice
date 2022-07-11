@@ -39,15 +39,12 @@ class DetailsCountryViewController: UIViewController, DetailsCountryDisplayLogic
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        getCountry()
     }
     
     override func loadView() {
         self.view = UIView()
         self.view.backgroundColor = .white
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        getCountry()
     }
     
     private func configureContentView() {
