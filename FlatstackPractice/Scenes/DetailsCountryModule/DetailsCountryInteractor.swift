@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DetailsCountryBusinessLogic {
-    
+    func getCountry(request: DetailsCountryModels.Request)
 }
 
 protocol DetailsCountryDataStore {
@@ -19,4 +19,9 @@ class DetailsCountryInteractor: DetailsCountryBusinessLogic, DetailsCountryDataS
     
     var presenter: DetailsCountryPresentationLogic?
     var country: Country!
+    
+    func getCountry(request: DetailsCountryModels.Request) {
+        let response = DetailsCountryModels.Response(country: country)
+        presenter?.presentCountry(response: response)
+    }
 }

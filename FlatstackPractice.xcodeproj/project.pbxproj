@@ -13,7 +13,6 @@
 		A30A52A9286C630600781055 /* FlatstackPractice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A30A52A7286C630600781055 /* FlatstackPractice.xcdatamodeld */; };
 		A30A52AB286C630800781055 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A30A52AA286C630800781055 /* Assets.xcassets */; };
 		A30A52AE286C630800781055 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A30A52AC286C630800781055 /* LaunchScreen.storyboard */; };
-		A30A52B9286C630900781055 /* FlatstackPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52B8286C630900781055 /* FlatstackPracticeTests.swift */; };
 		A30A52C3286C630900781055 /* FlatstackPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52C2286C630900781055 /* FlatstackPracticeUITests.swift */; };
 		A30A52C5286C630900781055 /* FlatstackPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52C4286C630900781055 /* FlatstackPracticeUITestsLaunchTests.swift */; };
 		A30A52D3286C687800781055 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A30A52D2286C687800781055 /* Kingfisher */; };
@@ -25,6 +24,7 @@
 		A30A52E6286C6FE400781055 /* CountryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E5286C6FE400781055 /* CountryListInteractor.swift */; };
 		A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */; };
 		A30A52EA286C702400781055 /* CountryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E9286C702400781055 /* CountryListRouter.swift */; };
+		A34842992879D645002BFEB5 /* DetailsCountryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842982879D645002BFEB5 /* DetailsCountryModels.swift */; };
 		A36091D828742F32001D65D7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36091D728742F32001D65D7 /* Configuration.swift */; };
 		A36091DD2876DA0B001D65D7 /* DetailsCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36091DC2876DA0B001D65D7 /* DetailsCountryViewController.swift */; };
 		A36091DF2876DA4A001D65D7 /* DetailsCountryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36091DE2876DA4A001D65D7 /* DetailsCountryInteractor.swift */; };
@@ -68,7 +68,6 @@
 		A30A52AD286C630800781055 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A30A52AF286C630800781055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30A52B4286C630900781055 /* FlatstackPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatstackPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A30A52B8286C630900781055 /* FlatstackPracticeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatstackPracticeTests.swift; sourceTree = "<group>"; };
 		A30A52BE286C630900781055 /* FlatstackPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlatstackPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30A52C2286C630900781055 /* FlatstackPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatstackPracticeUITests.swift; sourceTree = "<group>"; };
 		A30A52C4286C630900781055 /* FlatstackPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatstackPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		A30A52E5286C6FE400781055 /* CountryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractor.swift; sourceTree = "<group>"; };
 		A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListPresenter.swift; sourceTree = "<group>"; };
 		A30A52E9286C702400781055 /* CountryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListRouter.swift; sourceTree = "<group>"; };
+		A34842982879D645002BFEB5 /* DetailsCountryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCountryModels.swift; sourceTree = "<group>"; };
 		A36091D728742F32001D65D7 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A36091DC2876DA0B001D65D7 /* DetailsCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCountryViewController.swift; sourceTree = "<group>"; };
 		A36091DE2876DA4A001D65D7 /* DetailsCountryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCountryInteractor.swift; sourceTree = "<group>"; };
@@ -160,7 +160,6 @@
 		A30A52B7286C630900781055 /* FlatstackPracticeTests */ = {
 			isa = PBXGroup;
 			children = (
-				A30A52B8286C630900781055 /* FlatstackPracticeTests.swift */,
 			);
 			path = FlatstackPracticeTests;
 			sourceTree = "<group>";
@@ -243,6 +242,7 @@
 				A36091E02876DA59001D65D7 /* DetailsCountryPresenter.swift */,
 				A36091E22876DA6E001D65D7 /* DetailsCountryRouter.swift */,
 				A36091E42876DA82001D65D7 /* DetailsCountryAssembly.swift */,
+				A34842982879D645002BFEB5 /* DetailsCountryModels.swift */,
 			);
 			path = DetailsCountryModule;
 			sourceTree = "<group>";
@@ -417,6 +417,7 @@
 				A30A52D6286C697700781055 /* Country.swift in Sources */,
 				A36091E12876DA59001D65D7 /* DetailsCountryPresenter.swift in Sources */,
 				A36091E52876DA82001D65D7 /* DetailsCountryAssembly.swift in Sources */,
+				A34842992879D645002BFEB5 /* DetailsCountryModels.swift in Sources */,
 				A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */,
 				A36091DD2876DA0B001D65D7 /* DetailsCountryViewController.swift in Sources */,
 				A36091DF2876DA4A001D65D7 /* DetailsCountryInteractor.swift in Sources */,
@@ -428,7 +429,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A30A52B9286C630900781055 /* FlatstackPracticeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

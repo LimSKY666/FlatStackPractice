@@ -15,9 +15,8 @@ protocol CountryService {
 
 struct DefaultCountryService: CountryService {
     
-    let listParser: DefaultListParser
-    let configuration = URLSessionConfiguration.default
-    let operationQueue = OperationQueue()
+    let listParser: ListParser
+    private let configuration = URLSessionConfiguration.default
     
     private func readLocalFile(forName name: String) -> Data? {
         do {

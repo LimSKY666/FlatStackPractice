@@ -9,11 +9,12 @@ import Foundation
 import UIKit
 
 protocol DetailsModuleAssembly {
-    func assemble(country: Country) -> DetailsCountryViewController
+    func assemble(country: Country) -> UIViewController
 }
 
 struct DefaultDetailsCountryAssembly: DetailsModuleAssembly {
-    func assemble(country: Country) -> DetailsCountryViewController {
+    
+    func assemble(country: Country) -> UIViewController {
         let viewController = DetailsCountryViewController()
         let interactor = DetailsCountryInteractor()
         let presenter = DetailsCountryPresenter()
@@ -27,4 +28,5 @@ struct DefaultDetailsCountryAssembly: DetailsModuleAssembly {
         router.viewController = viewController
         return viewController
     }
+    
 }
