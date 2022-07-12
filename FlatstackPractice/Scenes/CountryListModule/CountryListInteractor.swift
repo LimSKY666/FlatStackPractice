@@ -15,13 +15,13 @@ protocol CountryListBusinessLogic {
 
 protocol CountryListDataStore
 {
-  var countryList: CountryList? { get }
+  var countryList: CountryList? { get set }
 }
 
 class CountryListInteractor: CountryListBusinessLogic, CountryListDataStore {
     
     var presenter: CountryListPresentationLogic?
-    private(set) var countryList: CountryList?
+    var countryList: CountryList?
     var countryService: CountryService?
     
     func fetchCountryList(request: CountryListModels.FetchCountries.Request) {

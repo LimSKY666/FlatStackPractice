@@ -25,6 +25,20 @@
 		A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */; };
 		A30A52EA286C702400781055 /* CountryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E9286C702400781055 /* CountryListRouter.swift */; };
 		A34842992879D645002BFEB5 /* DetailsCountryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842982879D645002BFEB5 /* DetailsCountryModels.swift */; };
+		A34842C9287C5868002BFEB5 /* CountryInfoParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842C8287C5868002BFEB5 /* CountryInfoParserMock.swift */; };
+		A34842CB287C588E002BFEB5 /* CountryListInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842CA287C588E002BFEB5 /* CountryListInteractorMock.swift */; };
+		A34842CD287C589C002BFEB5 /* CountryListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842CC287C589C002BFEB5 /* CountryListPresenterMock.swift */; };
+		A34842CF287C58A8002BFEB5 /* CountryListRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842CE287C58A8002BFEB5 /* CountryListRouterMock.swift */; };
+		A34842D1287C58B4002BFEB5 /* CountryListViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842D0287C58B4002BFEB5 /* CountryListViewControllerMock.swift */; };
+		A34842D3287C58C2002BFEB5 /* CountryParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842D2287C58C2002BFEB5 /* CountryParserMock.swift */; };
+		A34842D5287C58CC002BFEB5 /* CountryServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842D4287C58CC002BFEB5 /* CountryServiceMock.swift */; };
+		A34842D7287C58DE002BFEB5 /* ListParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842D6287C58DE002BFEB5 /* ListParserMock.swift */; };
+		A34842DA287C5943002BFEB5 /* CountryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842D9287C5943002BFEB5 /* CountryExtension.swift */; };
+		A34842DC287C5962002BFEB5 /* CountryListAssemblyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842DB287C5962002BFEB5 /* CountryListAssemblyTests.swift */; };
+		A34842DE287C5970002BFEB5 /* CountryListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842DD287C5970002BFEB5 /* CountryListInteractorTests.swift */; };
+		A34842E0287C597C002BFEB5 /* CountryListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842DF287C597C002BFEB5 /* CountryListPresenterTests.swift */; };
+		A34842E2287C5989002BFEB5 /* CountryServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842E1287C5989002BFEB5 /* CountryServiceTests.swift */; };
+		A34842E4287C5999002BFEB5 /* CountryInfoParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842E3287C5999002BFEB5 /* CountryInfoParserTests.swift */; };
 		A36091D828742F32001D65D7 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36091D728742F32001D65D7 /* Configuration.swift */; };
 		A36091DD2876DA0B001D65D7 /* DetailsCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36091DC2876DA0B001D65D7 /* DetailsCountryViewController.swift */; };
 		A36091DF2876DA4A001D65D7 /* DetailsCountryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36091DE2876DA4A001D65D7 /* DetailsCountryInteractor.swift */; };
@@ -78,6 +92,20 @@
 		A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListPresenter.swift; sourceTree = "<group>"; };
 		A30A52E9286C702400781055 /* CountryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListRouter.swift; sourceTree = "<group>"; };
 		A34842982879D645002BFEB5 /* DetailsCountryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCountryModels.swift; sourceTree = "<group>"; };
+		A34842C8287C5868002BFEB5 /* CountryInfoParserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoParserMock.swift; sourceTree = "<group>"; };
+		A34842CA287C588E002BFEB5 /* CountryListInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractorMock.swift; sourceTree = "<group>"; };
+		A34842CC287C589C002BFEB5 /* CountryListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListPresenterMock.swift; sourceTree = "<group>"; };
+		A34842CE287C58A8002BFEB5 /* CountryListRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListRouterMock.swift; sourceTree = "<group>"; };
+		A34842D0287C58B4002BFEB5 /* CountryListViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewControllerMock.swift; sourceTree = "<group>"; };
+		A34842D2287C58C2002BFEB5 /* CountryParserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryParserMock.swift; sourceTree = "<group>"; };
+		A34842D4287C58CC002BFEB5 /* CountryServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServiceMock.swift; sourceTree = "<group>"; };
+		A34842D6287C58DE002BFEB5 /* ListParserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListParserMock.swift; sourceTree = "<group>"; };
+		A34842D9287C5943002BFEB5 /* CountryExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryExtension.swift; sourceTree = "<group>"; };
+		A34842DB287C5962002BFEB5 /* CountryListAssemblyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListAssemblyTests.swift; sourceTree = "<group>"; };
+		A34842DD287C5970002BFEB5 /* CountryListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractorTests.swift; sourceTree = "<group>"; };
+		A34842DF287C597C002BFEB5 /* CountryListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListPresenterTests.swift; sourceTree = "<group>"; };
+		A34842E1287C5989002BFEB5 /* CountryServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryServiceTests.swift; sourceTree = "<group>"; };
+		A34842E3287C5999002BFEB5 /* CountryInfoParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoParserTests.swift; sourceTree = "<group>"; };
 		A36091D728742F32001D65D7 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		A36091DC2876DA0B001D65D7 /* DetailsCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCountryViewController.swift; sourceTree = "<group>"; };
 		A36091DE2876DA4A001D65D7 /* DetailsCountryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCountryInteractor.swift; sourceTree = "<group>"; };
@@ -126,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				A30A529D286C630600781055 /* FlatstackPractice */,
-				A30A52B7286C630900781055 /* FlatstackPracticeTests */,
+				A34842C4287C5803002BFEB5 /* FlatstackPracticeTests */,
 				A30A52C1286C630900781055 /* FlatstackPracticeUITests */,
 				A30A529C286C630600781055 /* Products */,
 			);
@@ -155,13 +183,6 @@
 				A30A52A0286C630600781055 /* SceneDelegate.swift */,
 			);
 			path = FlatstackPractice;
-			sourceTree = "<group>";
-		};
-		A30A52B7286C630900781055 /* FlatstackPracticeTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FlatstackPracticeTests;
 			sourceTree = "<group>";
 		};
 		A30A52C1286C630900781055 /* FlatstackPracticeUITests */ = {
@@ -224,6 +245,43 @@
 				A3AF9A972872DFBF00012648 /* CountryListModels.swift */,
 			);
 			path = CountryListModule;
+			sourceTree = "<group>";
+		};
+		A34842C4287C5803002BFEB5 /* FlatstackPracticeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A34842C6287C583A002BFEB5 /* Mocks */,
+				A34842C5287C5830002BFEB5 /* Extensions */,
+				A34842DB287C5962002BFEB5 /* CountryListAssemblyTests.swift */,
+				A34842DD287C5970002BFEB5 /* CountryListInteractorTests.swift */,
+				A34842DF287C597C002BFEB5 /* CountryListPresenterTests.swift */,
+				A34842E1287C5989002BFEB5 /* CountryServiceTests.swift */,
+				A34842E3287C5999002BFEB5 /* CountryInfoParserTests.swift */,
+			);
+			path = FlatstackPracticeTests;
+			sourceTree = "<group>";
+		};
+		A34842C5287C5830002BFEB5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A34842D9287C5943002BFEB5 /* CountryExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A34842C6287C583A002BFEB5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A34842C8287C5868002BFEB5 /* CountryInfoParserMock.swift */,
+				A34842CA287C588E002BFEB5 /* CountryListInteractorMock.swift */,
+				A34842CC287C589C002BFEB5 /* CountryListPresenterMock.swift */,
+				A34842CE287C58A8002BFEB5 /* CountryListRouterMock.swift */,
+				A34842D0287C58B4002BFEB5 /* CountryListViewControllerMock.swift */,
+				A34842D2287C58C2002BFEB5 /* CountryParserMock.swift */,
+				A34842D4287C58CC002BFEB5 /* CountryServiceMock.swift */,
+				A34842D6287C58DE002BFEB5 /* ListParserMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		A36091D628742F21001D65D7 /* Configurations */ = {
@@ -333,6 +391,7 @@
 					};
 					A30A52B3286C630900781055 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = A30A529A286C630600781055;
 					};
 					A30A52BD286C630900781055 = {
@@ -429,6 +488,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A34842D1287C58B4002BFEB5 /* CountryListViewControllerMock.swift in Sources */,
+				A34842E0287C597C002BFEB5 /* CountryListPresenterTests.swift in Sources */,
+				A34842DA287C5943002BFEB5 /* CountryExtension.swift in Sources */,
+				A34842DC287C5962002BFEB5 /* CountryListAssemblyTests.swift in Sources */,
+				A34842D3287C58C2002BFEB5 /* CountryParserMock.swift in Sources */,
+				A34842E4287C5999002BFEB5 /* CountryInfoParserTests.swift in Sources */,
+				A34842D7287C58DE002BFEB5 /* ListParserMock.swift in Sources */,
+				A34842E2287C5989002BFEB5 /* CountryServiceTests.swift in Sources */,
+				A34842D5287C58CC002BFEB5 /* CountryServiceMock.swift in Sources */,
+				A34842DE287C5970002BFEB5 /* CountryListInteractorTests.swift in Sources */,
+				A34842CD287C589C002BFEB5 /* CountryListPresenterMock.swift in Sources */,
+				A34842CF287C58A8002BFEB5 /* CountryListRouterMock.swift in Sources */,
+				A34842C9287C5868002BFEB5 /* CountryInfoParserMock.swift in Sources */,
+				A34842CB287C588E002BFEB5 /* CountryListInteractorMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,15 +716,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SB3B62C7R7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = itis.FlatstackPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FlatstackPractice.app/FlatstackPractice";
@@ -663,11 +743,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SB3B62C7R7;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = itis.FlatstackPracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
