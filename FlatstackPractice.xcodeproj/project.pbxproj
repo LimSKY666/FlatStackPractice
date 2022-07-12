@@ -24,6 +24,12 @@
 		A30A52E6286C6FE400781055 /* CountryListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E5286C6FE400781055 /* CountryListInteractor.swift */; };
 		A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */; };
 		A30A52EA286C702400781055 /* CountryListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A52E9286C702400781055 /* CountryListRouter.swift */; };
+		A3377D91287D83B30014F98C /* ImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377D90287D83B30014F98C /* ImageCollectionViewController.swift */; };
+		A3377D93287D83C70014F98C /* ImageCollectionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377D92287D83C70014F98C /* ImageCollectionInteractor.swift */; };
+		A3377D95287D83DA0014F98C /* ImageCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377D94287D83DA0014F98C /* ImageCollectionPresenter.swift */; };
+		A3377D97287D83E50014F98C /* ImageCollectionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377D96287D83E50014F98C /* ImageCollectionRouter.swift */; };
+		A3377D99287D83F20014F98C /* ImageCollectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377D98287D83F20014F98C /* ImageCollectionAssembly.swift */; };
+		A3377D9B287D84000014F98C /* ImageCollectionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3377D9A287D84000014F98C /* ImageCollectionModels.swift */; };
 		A34842992879D645002BFEB5 /* DetailsCountryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842982879D645002BFEB5 /* DetailsCountryModels.swift */; };
 		A34842C9287C5868002BFEB5 /* CountryInfoParserMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842C8287C5868002BFEB5 /* CountryInfoParserMock.swift */; };
 		A34842CB287C588E002BFEB5 /* CountryListInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A34842CA287C588E002BFEB5 /* CountryListInteractorMock.swift */; };
@@ -91,6 +97,12 @@
 		A30A52E5286C6FE400781055 /* CountryListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractor.swift; sourceTree = "<group>"; };
 		A30A52E7286C6FFB00781055 /* CountryListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListPresenter.swift; sourceTree = "<group>"; };
 		A30A52E9286C702400781055 /* CountryListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListRouter.swift; sourceTree = "<group>"; };
+		A3377D90287D83B30014F98C /* ImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewController.swift; sourceTree = "<group>"; };
+		A3377D92287D83C70014F98C /* ImageCollectionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionInteractor.swift; sourceTree = "<group>"; };
+		A3377D94287D83DA0014F98C /* ImageCollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionPresenter.swift; sourceTree = "<group>"; };
+		A3377D96287D83E50014F98C /* ImageCollectionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionRouter.swift; sourceTree = "<group>"; };
+		A3377D98287D83F20014F98C /* ImageCollectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionAssembly.swift; sourceTree = "<group>"; };
+		A3377D9A287D84000014F98C /* ImageCollectionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionModels.swift; sourceTree = "<group>"; };
 		A34842982879D645002BFEB5 /* DetailsCountryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCountryModels.swift; sourceTree = "<group>"; };
 		A34842C8287C5868002BFEB5 /* CountryInfoParserMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoParserMock.swift; sourceTree = "<group>"; };
 		A34842CA287C588E002BFEB5 /* CountryListInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListInteractorMock.swift; sourceTree = "<group>"; };
@@ -227,6 +239,7 @@
 		A30A52E3286C6F6E00781055 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A3377D8F287D839F0014F98C /* ImageCollectionModule */,
 				A36091DB2876D9C3001D65D7 /* DetailsCountryModule */,
 				A30A52E4286C6FAF00781055 /* CountryListModule */,
 			);
@@ -245,6 +258,19 @@
 				A3AF9A972872DFBF00012648 /* CountryListModels.swift */,
 			);
 			path = CountryListModule;
+			sourceTree = "<group>";
+		};
+		A3377D8F287D839F0014F98C /* ImageCollectionModule */ = {
+			isa = PBXGroup;
+			children = (
+				A3377D90287D83B30014F98C /* ImageCollectionViewController.swift */,
+				A3377D92287D83C70014F98C /* ImageCollectionInteractor.swift */,
+				A3377D94287D83DA0014F98C /* ImageCollectionPresenter.swift */,
+				A3377D96287D83E50014F98C /* ImageCollectionRouter.swift */,
+				A3377D98287D83F20014F98C /* ImageCollectionAssembly.swift */,
+				A3377D9A287D84000014F98C /* ImageCollectionModels.swift */,
+			);
+			path = ImageCollectionModule;
 			sourceTree = "<group>";
 		};
 		A34842C4287C5803002BFEB5 /* FlatstackPracticeTests */ = {
@@ -463,15 +489,20 @@
 				A3AF9A86286D97B900012648 /* CountryInfo.swift in Sources */,
 				A30A52A3286C630600781055 /* CountryListViewController.swift in Sources */,
 				A3AF9A84286D951100012648 /* CountryListAssembly.swift in Sources */,
+				A3377D93287D83C70014F98C /* ImageCollectionInteractor.swift in Sources */,
 				A3AF9A82286D937300012648 /* CountryParser.swift in Sources */,
 				A30A52EA286C702400781055 /* CountryListRouter.swift in Sources */,
 				A30A529F286C630600781055 /* AppDelegate.swift in Sources */,
 				A3AF9A88286D983F00012648 /* ListParser.swift in Sources */,
 				A30A52DE286C6B9200781055 /* CountryList.swift in Sources */,
 				A30A52A9286C630600781055 /* FlatstackPractice.xcdatamodeld in Sources */,
+				A3377D9B287D84000014F98C /* ImageCollectionModels.swift in Sources */,
 				A36091E32876DA6E001D65D7 /* DetailsCountryRouter.swift in Sources */,
 				A36091D828742F32001D65D7 /* Configuration.swift in Sources */,
 				A30A52A1286C630600781055 /* SceneDelegate.swift in Sources */,
+				A3377D95287D83DA0014F98C /* ImageCollectionPresenter.swift in Sources */,
+				A3377D99287D83F20014F98C /* ImageCollectionAssembly.swift in Sources */,
+				A3377D91287D83B30014F98C /* ImageCollectionViewController.swift in Sources */,
 				A3AF9A8C286E0B5F00012648 /* CountryListTableViewCell.swift in Sources */,
 				A30A52D6286C697700781055 /* Country.swift in Sources */,
 				A36091E12876DA59001D65D7 /* DetailsCountryPresenter.swift in Sources */,
@@ -480,6 +511,7 @@
 				A30A52E8286C6FFB00781055 /* CountryListPresenter.swift in Sources */,
 				A36091DD2876DA0B001D65D7 /* DetailsCountryViewController.swift in Sources */,
 				A36091DF2876DA4A001D65D7 /* DetailsCountryInteractor.swift in Sources */,
+				A3377D97287D83E50014F98C /* ImageCollectionRouter.swift in Sources */,
 				A3AF9A8A286DBB9300012648 /* CountryInfoParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
