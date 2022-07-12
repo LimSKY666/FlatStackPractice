@@ -41,8 +41,8 @@ struct DefaultCountryService: CountryService {
     }
     
     func fetchCountryList(stringURL: String, completion: @escaping (CountryList?, Error?) -> Void) {
-        let session = URLSession(configuration: self.configuration)
         if let url = URL(string: stringURL) {
+            let session = URLSession(configuration: self.configuration)
             var request = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData)
             request.httpMethod = "GET"
             session.dataTask(with: request) { data, response, error in
