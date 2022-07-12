@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol DetailsCountryRoutingLogic {
-    
+    func routeToImageCollection()
 }
 
 protocol DetailsCountryDataPassing {
@@ -20,4 +20,15 @@ class DetailsCountryRouter: DetailsCountryRoutingLogic, DetailsCountryDataPassin
     
     weak var viewController: DetailsCountryViewController?
     var dataStore: DetailsCountryDataStore?
+    
+    func routeToImageCollection() {
+        //guard let images = dataStore?.country.countryInfo.images else { return }
+        let images = ["Abs", "ab"]
+        guard let imageCollectionViewController = DefaultImageCollectionAssembly().assemble(images: images) as? ImageCollectionViewController else { return }
+        guard let detailsCountryViewContoller = viewController else { return }
+        detailsCountryViewContoller.addChild(imageCollectionViewController)
+        imageCollectionViewController.didMove(toParent: detailsCountryViewContoller)
+        detailsCountryViewContoller.containerView.addSubview(imageCollectionViewController.view)
+        imageCollectionViewController.configureView()
+    }
 }

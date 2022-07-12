@@ -35,11 +35,13 @@ class DetailsCountryViewController: UIViewController, DetailsCountryDisplayLogic
     let firstLine = UIView()
     let secondLine = UIView()
     let thirdLine = UIView()
+    let containerView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
         getCountry()
+        router?.routeToImageCollection()
     }
     
     override func loadView() {
@@ -48,16 +50,16 @@ class DetailsCountryViewController: UIViewController, DetailsCountryDisplayLogic
     }
     
     private func configureContentView() {
-        view.addSubview(contentView)
+        scrollView.addSubview(contentView)
         contentView.snp.makeConstraints { make in
             make.width.equalTo(view)
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.top.equalToSuperview()
             make.bottom.leading.trailing.equalToSuperview()
         }
     }
     
     private func configureScrollView() {
-        contentView.addSubview(scrollView)
+        view.addSubview(scrollView)
         scrollView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
@@ -67,7 +69,7 @@ class DetailsCountryViewController: UIViewController, DetailsCountryDisplayLogic
         contentView.addSubview(nameLabel)
         nameLabel.font = UIFont(name: "Helvetica", size: 22)
         nameLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.equalTo(containerView.snp.bottom).inset(-50)
             make.leading.equalToSuperview().inset(15)
         }
     }
@@ -179,6 +181,7 @@ class DetailsCountryViewController: UIViewController, DetailsCountryDisplayLogic
             make.top.equalTo(aboutLabel).inset(25)
             make.trailing.equalToSuperview().inset(15)
             make.leading.equalToSuperview().inset(15)
+            make.bottom.equalToSuperview()
         }
     }
     
@@ -215,9 +218,19 @@ class DetailsCountryViewController: UIViewController, DetailsCountryDisplayLogic
         }
     }
     
+    private func configureContainerView() {
+        contentView.addSubview(containerView)
+        containerView.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(240)
+        }
+    }
+    
     private func configure() {
-        configureContentView()
         configureScrollView()
+        configureContentView()
+        configureContainerView()
         configureNameLabel()
         configureStarImageView()
         configureCapitalLabel()
